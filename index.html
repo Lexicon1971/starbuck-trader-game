@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAR BUCKS - The Strategic Edition (v6.3)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+          --color-primary: #047857; /* Emerald-600 */
+          --color-secondary: #fcd34d; /* Amber-300 */
+          --color-accent: #3b82f6; /* Blue-500 */
+          --color-log-info: #94a3b8; /* Slate-400 */
+          --color-log-buy: #60a5fa; /* Blue-400 */
+          --color-log-sell: #34d399; /* Emerald-400 */
+          --color-log-danger: #f87171; /* Red-400 */
+          --color-loan-debt: #f59e0b; /* Amber-500 */
+      }
+      body {
+          font-family: 'Inter', sans-serif;
+          background-color: #06110f; /* Very Dark Green-Blue */
+          color: #d1fae5; /* Light mint */
+      }
+      .text-neon {
+          color: var(--color-secondary);
+          text-shadow: 0 0 5px #fcd34d99, 0 0 10px #fcd34d66;
+      }
+      .font-scifi {
+          font-family: 'Orbitron', sans-serif;
+      }
+      .card {
+          background-color: #0c4a34; /* Dark Emerald */
+          border: 1px solid #10b981; /* Emerald-500 */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+          transition: transform 0.2s;
+      }
+      .card:hover {
+          transform: translateY(-2px);
+      }
+      .action-btn {
+          background-color: var(--color-accent);
+          color: white;
+          transition: background-color 0.15s, transform 0.15s;
+      }
+      .action-btn:hover {
+          background-color: #2563eb;
+          transform: scale(1.02);
+      }
+      .table-header {
+          background-color: #0d5c41;
+      }
+      /* Custom Scrollbar for the Market and Comms */
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #10b981;
+          border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+          background: #0c4a34;
+      }
+      /* Icon for Titanium Ore: Stylized Asteroid/Ore Lump SVG */
+      .titanium-icon {
+          display: inline-block;
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 0.5rem;
+          vertical-align: middle;
+          color: #9CA3AF;
+      }
+      .modal {
+          background-color: #06110f;
+          border: 2px solid #10b981;
+          box-shadow: 0 0 20px rgba(4, 120, 87, 0.8);
+      }
+      /* Comms Log specific styles */
+      #comms-log {
+          font-family: 'Orbitron', sans-serif;
+          font-size: 0.75rem;
+          line-height: 1.2;
+      }
+      .log-entry {
+          margin-bottom: 0.25rem;
+          padding: 0.1rem 0;
+          border-bottom: 1px dotted #10b98133;
+      }
+      .log-info { color: var(--color-log-info); }
+      .log-buy { color: var(--color-log-buy); }
+      .log-sell { color: var(--color-log-sell); }
+      .log-danger { color: var(--color-log-danger); }
+      .log-jump { color: var(--color-secondary); }
+      .log-repair { color: #84cc16; } /* Lime-500 */
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+</head>
+  <body class="p-4 sm:p-8">
+    <div id="root"></div>
+  </body>
+</html>
